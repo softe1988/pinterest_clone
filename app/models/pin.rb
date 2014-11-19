@@ -1,3 +1,3 @@
 class Pin < ActiveRecord::Base
-	belong_to :board
+	belongs_to :board
 end
