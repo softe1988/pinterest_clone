@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   get 'main/about'
 
   get 'main/home'

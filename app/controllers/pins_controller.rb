@@ -16,10 +16,12 @@ class PinsController < ApplicationController
   # GET /pins/new
   def new
     @pin = Pin.new
+    @boards = Board.all
   end
 
   # GET /pins/1/edit
   def edit
+    @boards = Board.all
   end
 
   # POST /pins

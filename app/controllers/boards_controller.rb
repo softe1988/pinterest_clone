@@ -18,10 +18,13 @@ class BoardsController < ApplicationController
   def new
     @board = Board.new
     @pins = Pin.all
+    #adding a board -need to specify what users
+    @users = User.all
   end
 
   # GET /boards/1/edit
   def edit
+    @users = User.all
   end
 
   # POST /boards

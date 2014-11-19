@@ -20,8 +20,10 @@
     <%= f.text_area :about %>
   </div>
   <div class="field">
+    <!-- adding board, does board controller know about @users? -->
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+   <!-- Go to board controller and add @user.all to def edit and def new -->
+    <%= f.collection_select :user_id, @users, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
