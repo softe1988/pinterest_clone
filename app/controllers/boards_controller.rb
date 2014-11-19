@@ -10,11 +10,14 @@ class BoardsController < ApplicationController
   # GET /boards/1
   # GET /boards/1.json
   def show
+    @user = User.all
+    @pins = Pin.all
   end
 
   # GET /boards/new
   def new
     @board = Board.new
+    @pins = Pin.all
   end
 
   # GET /boards/1/edit

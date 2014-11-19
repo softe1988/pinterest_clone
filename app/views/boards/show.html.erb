@@ -12,8 +12,13 @@
 
 <p>
   <strong>User:</strong>
-  <%= @board.user_id %>
+  <%= @board.user.name %>
 </p>
+	<% @pins.each do |pin| %>
+
+	<li> <%= @pin.name %> </li>	
+
+	</ul>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %>

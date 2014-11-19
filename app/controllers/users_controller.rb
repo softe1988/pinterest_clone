@@ -10,11 +10,14 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @boards = Board.all
+    #each user has many boards
   end
 
   # GET /users/new
   def new
     @user = User.new
+    @boards = Board.all
   end
 
   # GET /users/1/edit
